@@ -1,0 +1,219 @@
+body, h1, h2, h3, p, ul, li {
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+    /* Estilos adicionales para los controles de cantidad */
+    .cantidad-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        margin-top: 10px;
+    }
+
+    .cantidad-control button {
+        padding: 5px 10px;
+        border: 1px solid #ddd;
+        background-color: #f0f0f0;
+        color: #333;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .cantidad-control button:hover {
+        background-color: #ddd;
+    }
+
+    .cantidad-control input {
+        width: 40px;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        font-size: 16px;
+    }
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: auto;
+}
+
+header {
+    background: #000000;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 1.1rem;
+    bottom: -16px;
+}
+
+.logo img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center; 
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+.productos h2{
+   color: red;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-size: 28px;
+
+}
+.producto {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.producto h3 {
+    margin: 12px 0 8px;
+}
+
+.producto .precio {
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.producto button {
+    padding: 8px 16px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.producto button:hover {
+    background-color: #0056b3;
+}
+
+.precio {
+    color: #e74c3c;
+    font-weight: bold;
+    cursor: text;
+}
+
+footer {
+    background: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 0.5rem 0;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr; /* Una columna en móviles */
+    }
+
+    footer {
+        padding: 0.5rem 0;
+    }
+
+    .producto {
+        margin-bottom: 30px; /* Reduce el margen inferior en móviles */
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        font-size: 15px;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Ajusta el tamaño de las columnas en tabletas */
+    }
+}
+
+@media (min-width: 1025px) {
+    body {
+        font-size: 16px;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Ajusta el tamaño de las columnas en escritorios */
+    }
+}
