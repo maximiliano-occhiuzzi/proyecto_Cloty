@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title style="border-color: brown;">Cloty Store</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Story Cloty</h1>
+        <nav>
+            <div class="logo">
+                <img src="https://via.placeholder.com/50" alt="Logotipo">
+            </div>
+            <ul>
+                <li><a href="main.html">Inicio</a></li>
+                <li><a href="venta.html">Venta total</a></li>
+                <li><a href="Touch.html">Tactil</a></li>
+                <li><a href="ganancias.html">Ganancias</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <center>
+            <h2>Productos Disponibles:</h2>
+        </center>
+
+        <section class="productos">
+            <h2>ALFAJORES</h2>
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto" data-producto-id="1">
+                    <img src="https://th.bing.com/th/id/R.c106d67548a06e2d3901e68455c3d789?rik=gaZNbKG79P79yQ&riu=http%3a%2f%2fd2r9epyceweg5n.cloudfront.net%2fstores%2f002%2f609%2f727%2fproducts%2fmesa-de-trabajo-511-26558fde5dd07df54216764742212003-640-0.png&ehk=vVMtYVr%2f0X%2fi6Wb2hPgbTtaoL36MSnoBwcNdm0I%2bdX4%3d&risl=&pid=ImgRaw&r=0" alt="Producto 1">
+                    <h3>Fantoche triple</h3>
+                    <p>Descripción breve del producto 1.</p>
+                    <p class="precio" data-producto-id="1" contenteditable="true">$10.00</p>
+                    <div class="cantidad-control">
+                        <button class="decrementar" data-producto-id="1">-</button>
+                        <input type="text" class="cantidad" data-producto-id="1" value="1">
+                        <button class="incrementar" data-producto-id="1">+</button>
+                    </div>
+                </div>
+
+                <!-- Aquí puedes seguir agregando productos con diferentes IDs... -->
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('.incrementar').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    const productoId = this.getAttribute('data-producto-id');
+                    const cantidadInput = document.querySelector(`.cantidad[data-producto-id="${productoId}"]`);
+                    let cantidad = parseInt(cantidadInput.value) || 0;
+                    cantidad += 1;
+                    cantidadInput.value = cantidad;
+                });
+            });
+
+            document.querySelectorAll('.decrementar').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    const productoId = this.getAttribute('data-producto-id');
+                    const cantidadInput = document.querySelector(`.cantidad[data-producto-id="${productoId}"]`);
+                    let cantidad = parseInt(cantidadInput.value) || 0;
+                    if (cantidad > 1) {
+                        cantidad -= 1;
+                    }
+                    cantidadInput.value = cantidad;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
