@@ -119,6 +119,7 @@ main {
    font-size: 28px;
 
 }
+
 .producto {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -126,6 +127,11 @@ main {
     text-align: center;
     background-color: #fff;
     margin-bottom: 50px;
+    transition: transform 0.3s ease; /* Agregar una transición suave */
+}
+
+.producto:hover {
+    transform: scale(1.05); /* Aumenta el tamaño al 105% */
 }
 
 
