@@ -1,7 +1,16 @@
-body, h1, h2, h3, p, ul, li {
+body, li {
     margin: auto;
     padding: 0;
     box-sizing: border-box;
+    background-image: url(https://img.freepik.com/vector-premium/fondo-contraste-rojo-negro-ondas-corporativas-diseno-volante-banner-lugar-texto-ilustracion-vectorial_623474-389.jpg);
+    background-size: cover;         /* Para que la imagen cubra todo el fondo */
+    background-attachment: fixed;   /* Mantiene la imagen fija en su lugar */
+    background-position: center;    /* Centra la imagen */
+    background-repeat: no-repeat;
+}
+h2{
+    background-color: #000000;
+    color: #fff;
 }
     /* Estilos adicionales para los controles de cantidad */
     .cantidad-control {
@@ -73,8 +82,8 @@ nav {
 
 .logo img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
 }
 
 nav ul {
@@ -153,7 +162,7 @@ main {
 .producto button {
     padding: 8px 16px;
     border: none;
-    background-color: #007bff;
+    background-color: #ff0000;
     color: #fff;
     border-radius: 4px;
     cursor: pointer;
@@ -164,7 +173,7 @@ main {
 }
 
 .precio {
-    color: #e74c3c;
+    color: #ffffff;
     font-weight: bold;
     cursor: text;
 }
